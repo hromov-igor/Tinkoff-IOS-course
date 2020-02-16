@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_converter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMw-u7-mO6">
+                                <rect key="frame" x="26" y="323" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGO-tP-5RN">
+                                <rect key="frame" x="0.0" y="67" width="375" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFY-Xm-Gfa">
+                                <rect key="frame" x="0.0" y="385" width="375" height="214"/>
+                            </pickerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-Fm-Y94">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GL-ee-SST">
+                                <rect key="frame" x="164" y="352" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Na-CT-IvT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Ob-Fm-Y94" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0gu-N7-BdQ"/>
+                            <constraint firstItem="5GL-ee-SST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Vj-Xl-hcx"/>
+                            <constraint firstItem="MMw-u7-mO6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Abn-jm-SbH"/>
+                            <constraint firstItem="8Ob-Fm-Y94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5r-fd-wLN"/>
+                            <constraint firstItem="5GL-ee-SST" firstAttribute="top" secondItem="8Ob-Fm-Y94" secondAttribute="bottom" constant="15" id="FEe-Q2-BG8"/>
+                            <constraint firstItem="cGO-tP-5RN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KpI-bW-jHS"/>
+                            <constraint firstItem="AFY-Xm-Gfa" firstAttribute="top" secondItem="5GL-ee-SST" secondAttribute="bottom" constant="10" id="Md1-Xf-wul"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MMw-u7-mO6" secondAttribute="trailing" constant="10" id="OLu-WB-AzZ"/>
+                            <constraint firstItem="MMw-u7-mO6" firstAttribute="top" secondItem="cGO-tP-5RN" secondAttribute="bottom" constant="10" id="cKK-VB-ADj"/>
+                            <constraint firstAttribute="trailing" secondItem="AFY-Xm-Gfa" secondAttribute="trailing" id="eJg-g4-PeB"/>
+                            <constraint firstItem="AFY-Xm-Gfa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oyZ-tZ-4lL"/>
+                            <constraint firstItem="MMw-u7-mO6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="p6c-6r-4zU"/>
+                            <constraint firstAttribute="trailing" secondItem="cGO-tP-5RN" secondAttribute="trailing" id="vvV-0I-6uE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AFY-Xm-Gfa" secondAttribute="bottom" id="xSy-Bl-qZ5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8Ob-Fm-Y94" id="LFp-6d-p0M"/>
+                        <outlet property="label" destination="MMw-u7-mO6" id="2Kl-Q7-4pF"/>
+                        <outlet property="pickerFrom" destination="cGO-tP-5RN" id="zsi-2I-M27"/>
+                        <outlet property="pickerTo" destination="AFY-Xm-Gfa" id="wJY-XV-axm"/>
+                        <outlet property="reloadButton" destination="5GL-ee-SST" id="9WY-xh-bJE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

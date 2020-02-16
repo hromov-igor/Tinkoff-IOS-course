@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					65F3AE611E5B4A7A00FD48AA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SSN9VW6SBK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SSN9VW6SBK;
 				INFOPLIST_FILE = "Currency converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "home.Currency-converter";
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SSN9VW6SBK;
 				INFOPLIST_FILE = "Currency converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "home.Currency-converter";
@@ -297,6 +300,7 @@
 				65F3AE761E5B4A7A00FD48AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
